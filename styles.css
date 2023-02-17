@@ -1,0 +1,114 @@
+/* Style the entire page */
+body {
+    background-color: #f7f7f7;
+    font-family: 'Poppins', sans-serif
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #ffffff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+  }
+
+  h1 {
+    font-size: 48px;
+    font-weight: 500;
+    color: black;
+  }
+  
+  /* Style the navigation bar */
+  nav {
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  nav h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 500;
+  }
+  
+  /* Style the form */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  label {
+    font-size: 18px;
+    margin-top: 20px;
+    display: block;
+  }
+  
+  input,
+  select {
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  input:invalid {
+    border: 1px solid red;
+  }  
+
+  button {
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #444;
+  }
+  
+  /* Style the book list */
+  #book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 40px auto;
+  }
+  
+  .book {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+  }
+  
+  .book h2 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+  
+  .book p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .book p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .book p:nth-child(3) {
+    font-weight: bold;
+  }
+  
