@@ -33,7 +33,7 @@ function addBookToLibrary(event) {
   bookForm.reset();
 }
 
-function renderBook(book) {
+function renderBook(book, index) {
   const bookElement = document.createElement('div');
   bookElement.classList.add('book');
   bookElement.innerHTML = `
@@ -41,8 +41,18 @@ function renderBook(book) {
     <p>by ${book.author}</p>
     <p>${book.pages} pages</p>
     <p>${book.read === 'yes' ? 'Read' : 'Not read'}</p>
+    <button class="toggle-read-btn">Toggle Read Status</button>
+    <button class="remove-btn" data-index="${index}">Remove Book</button>
   `;
   bookList.appendChild(bookElement);
+
+  const removeBtn = bookElement.querySelector('.remove-btn');
+  removeBtn.addEventListener('click', ()  => {
+    const index = removeBtn.dataset.index;
+    bookList.removeChild(bookElement);
+
+    saveBookToLocalStorage(book)
+  });
 }
 
 function saveBookToLocalStorage(book) {
