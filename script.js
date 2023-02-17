@@ -51,7 +51,10 @@ function renderBook(book, index) {
     const index = removeBtn.dataset.index;
     bookList.removeChild(bookElement);
 
-    saveBookToLocalStorage(book)
+    // Remove the book from local storage
+    let books = JSON.parse(localStorage.getItem('books')) || [];
+    books.splice(index, 1);
+    localStorage.setItem('books', JSON.stringify(books));
   });
 }
 
